@@ -124,9 +124,16 @@ public enum Operation {
 	 * 例如 "sex != 0 && sex != 1": "throw new Error('sex 必须在 [0, 1] 内！')"
 	 * 自定义代码，当满足条件是执行后面的代码
 	 *
+	 * 还可以指定语言，例如 "python:sex not in(0, 1)": "throw new Error('sex 必须在 [0, 1] 内！')"
+	 *
 	 * 还有
 	 * "ELSE": ""
 	 * 自定义代码，不处理，和不传一样
+	 *
+	 * 需要
+	 * 1.AbstractFunctionParser.ENABLE_SCRIPT_FUNCTION = true 启用
+	 * 2.JDK 8~13 可用自带 Nashorn 这个 js 引擎，注意配置 ClassFilter 防脚本注入攻击；
+	 * 其它语言及 JDK 14+ 都必须依赖外部脚本引擎，注意按对应引擎说明方式防脚本注入攻击，最好是沙箱环境。
 	 */
 	IF,
 

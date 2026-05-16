@@ -31,7 +31,9 @@ public abstract class AbstractFunctionParser<T, M extends Map<String, Object>, L
     /**开启支持远程函数
      */
     public static boolean ENABLE_REMOTE_FUNCTION = true;
-    /**开启支持远程函数中的 JavaScript 脚本形式
+    /**开启支持远程函数中的 JavaScript/Python/Lua/PHP 等脚本形式。
+	 * JDK 8~13 可用自带 Nashorn 这个 js 引擎，注意配置 ClassFilter 防脚本注入攻击；
+	 * 其它语言及 JDK 14+ 都必须依赖外部脚本引擎，注意按对应引擎说明方式防脚本注入攻击，最好是沙箱环境。
      */
     public static boolean ENABLE_SCRIPT_FUNCTION = false;
 
