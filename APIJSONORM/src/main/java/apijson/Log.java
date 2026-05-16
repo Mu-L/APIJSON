@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
  */
 public class Log {
 	public static boolean DEBUG = false;
+	public static final String VERSION = "8.1.8";
 
 	public static final String LEVEL_VERBOSE = "VERBOSE";
 	public static final String LEVEL_INFO = "INFO";
@@ -21,7 +22,6 @@ public class Log {
 
 	public static String LEVEL = LEVEL_WARN;
 
-	public static final String VERSION = "8.1.7";
 	public static final String KEY_SYSTEM_INFO_DIVIDER = "\n---|-----APIJSON SYSTEM INFO-----|---\n";
 
 	public static final String OS_NAME;
